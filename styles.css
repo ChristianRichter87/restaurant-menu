@@ -53,14 +53,32 @@ h3 {
 
 .dishGrid {
     padding-top: 48px;
+    width: 90vw;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 48px 48px;
+    max-width: 1170px;
+    justify-items: center;
+    gap: 15px 15px;
+}
+
+@media screen and (min-width: 1200px) {
+    .dishGrid {
+      width: 95vw;
+      grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .gridElem {
+        grid-template-columns: 225px 1fr;
+        gap: 0 1.25rem;
+        max-width: 40rem;
+    }
 }
 
 .gridElem {
     display: grid;
-    grid-template-columns: auto auto;
+    max-width: 30rem;
     grid-gap: 15px 15px;
 }
 
@@ -82,18 +100,16 @@ h3 {
 .dish_head {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-between;
     font-weight: bolder;
 }
 
 .dish_price {
     color: #c59d5f;
-    text-align: right;
-    width: 20%
 }
 
 .dish_name {
     text-align: left;
-    width: 80%;
 }
 
 .dish_txt {
